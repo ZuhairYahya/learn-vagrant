@@ -51,7 +51,7 @@ Vagrant.configure("2") do |config|
   #
   config.vm.provider "virtualbox" do |vb|
   #   # Display the VirtualBox GUI when booting the machine
-  #   vb.gui = true
+     vb.gui = true
   #
   #   # Customize the amount of memory on the VM:
       vb.cpus = 1
@@ -63,10 +63,10 @@ Vagrant.configure("2") do |config|
   # View the documentation for the provider you are using for more
   # information on available options.
   config.vm.define "nginx1" do |nginx1|
-    nginx1.vm.network :private_network, ip: "10.10.10.20"
+    nginx1.vm.network :private_network, ip: "10.10.10.30"
   end
   config.vm.define "nginx2" do |nginx2|
-    nginx2.vm.network :private_network, ip: "10.10.10.21"
+    nginx2.vm.network :private_network, ip: "10.10.10.31"
   end
 
   # Enable provisioning with a shell script. Additional provisioners such as

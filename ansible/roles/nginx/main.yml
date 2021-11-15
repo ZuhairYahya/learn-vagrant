@@ -1,0 +1,6 @@
+- name: NGINX | Install nginx web server
+  become: yes
+  apt:
+    name: nginx
+    update_cache: yes
+    state: present
